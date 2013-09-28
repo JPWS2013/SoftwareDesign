@@ -36,5 +36,30 @@ def middle(word):
 def is_palindrome(word):
     """Write a good Docstring here."""
 
+    if len(word)<2:
+        print "The word you have entered is not a valid word to check for a palindrome"
+        return False
+    
+    firstletter=first(word)
+    lastletter=last(word)
+
+    if firstletter.lower()==lastletter.lower():
+        center=middle(word)
+
+        if len(center)!=0:
+            is_palindrome(center)
+
+    else:
+        return False
     # TODO: fill in the body of this function
     return True
+
+testword='HAnNah'
+
+test_result=is_palindrome(testword)
+
+if test_result==True:
+    print testword, "is a palindrome!"
+
+else:
+    print testword, "is not a palindrome!"
