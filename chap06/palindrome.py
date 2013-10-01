@@ -1,6 +1,6 @@
 """Module that provides is_palindrome.
 
-Author of is_palindrome: you
+Author of is_palindrome: Justin Poh
 """
 
 def first(word):
@@ -34,32 +34,22 @@ def middle(word):
 
 
 def is_palindrome(word):
-    """Write a good Docstring here."""
+    """Checks if a word is a palindrome or not
+
+    More information about what this function does:
+
+    word: Takes a word that must be a string
+
+    returns True if the word is a Palindrome and returns False if it is not """
 
     if len(word)<2:
-        print "The word you have entered is not a valid word to check for a palindrome"
-        return False
-    
-    firstletter=first(word)
-    lastletter=last(word)
+        return True
 
-    if firstletter.lower()==lastletter.lower():
-        center=middle(word)
-
-        if len(center)!=0:
-            is_palindrome(center)
+    if first(word).lower()==last(word).lower():
+            return is_palindrome(middle(word))
 
     else:
         return False
-    # TODO: fill in the body of this function
-    return True
 
-testword='HAnNah'
-
-test_result=is_palindrome(testword)
-
-if test_result==True:
-    print testword, "is a palindrome!"
-
-else:
-    print testword, "is not a palindrome!"
+print is_palindrome('hannah')
+print is_palindrome('hhhhemehhhh')

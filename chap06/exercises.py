@@ -1,3 +1,9 @@
+"""Module that contains my solutions to exercise 6-7 and 6-8 from thinkpython by allen downey
+
+Author of this module: Justin Poh
+"""
+
+
 def is_divisible(a,b):
 
 	""" Determines if two numbers are divisible or not
@@ -15,7 +21,7 @@ def is_divisible(a,b):
 	else:
 		return False
 
-def is_power(a,b): #Exercise 6.7
+def is_power(a,b): #Exercise 6-7
 
 	""" Takes two arguments a and b and determines if a is a power of b
 
@@ -30,18 +36,16 @@ def is_power(a,b): #Exercise 6.7
 		print "At least one of the numbers that you have provided will not work because it is not an integer"
 		return False
 
-	if a==1:
+	if a==b:
 		return True
 
 	if is_divisible(a,b):
-		is_power(a/b, b)
+			return is_power(a/b, b)
 
 	else:
 		return False
 
-	return True
-
-def gcd(a,b):
+def gcd(a,b): #Exercise 6-8
 
 	""" Determines the greatest common divisor (GCD) of two numbers
 
@@ -63,4 +67,5 @@ def gcd(a,b):
 		holder=gcd(b,r)
 		return holder
 
+#print is_power(75,2)
 print gcd(450.0, 100.0 )
