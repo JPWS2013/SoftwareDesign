@@ -35,11 +35,14 @@ def is_power(a,b): #Exercise 6-7
 	if type(a)==float or type(b)==float:
 		print "At least one of the numbers that you have provided will not work because it is not an integer"
 		return False
-
-	if a==b:
+	
+	if a==1:
 		return True
 
-	if is_divisible(a,b):
+	elif a==b:
+		return True
+
+	elif is_divisible(a,b):
 			return is_power(a/b, b)
 
 	else:
@@ -67,5 +70,5 @@ def gcd(a,b): #Exercise 6-8
 		holder=gcd(b,r)
 		return holder
 
-#print is_power(75,2)
-print gcd(450.0, 100.0 )
+print is_power(25,5)
+#print gcd(450.0, 100.0 )
