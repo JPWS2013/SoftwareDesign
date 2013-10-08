@@ -1,6 +1,6 @@
 def recurse(n, result=0):
-    """ My not so good way to do it"""
-    
+    """ My not so good way to do it """
+
     if type(n)!= int or n<0:
         return 'You did not provide an integer or the number you provided is less than zero which is invalid'
     if n==0:
@@ -10,7 +10,7 @@ def recurse(n, result=0):
 
 def sum_series(n):
 
-    """ The technically proper way to implement this"""
+    """ The technically proper way to implement this """
 
     if n==0:
         return 0
