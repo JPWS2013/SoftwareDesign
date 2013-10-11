@@ -18,17 +18,15 @@ def morethantwenty(s):
 def avoids(s,avoid):
 
 	for eachChar in s:
-		for eachAvoid in avoid:
-			if eachChar.lower()==eachAvoid.lower():
-				return False
+		if eachChar.lower() in avoid.lower():
+			return False
 
 	return True
 
 def use_only(s, use):
 	for eachChar in s:
-		for eachUse in use:
-			if eachChar.lower() != eachUse.lower():
-				return False
+		if eachChar.lower() not in use.lower():
+			return False
 
 	return True
 
@@ -36,25 +34,15 @@ def uses_all(s, useall):
 
 	for eachUseAll in useall:
 
-		doesExist=False	
-			
-		for eachChar in s:
-			if eachChar.lower()==eachUseAll.lower():
-				doesExist=True
-		
-		if doesExist==False:
+		if eachUseAll not in s:
 			return False
 
 	return True
 
 def is_abecedarian(s):
 
-	for i in range(1, len(s)):
-
-		currentChar=ord(s[i-1].lower())
-		nextChar=ord(s[i].lower())
-
-		if currentChar>nextChar:
+	for i in range (1, len(s)):
+		if s[i-1].lower()>s[i].lower():
 			return False
 	return True
 
@@ -77,11 +65,11 @@ def main():
         #if use_only(word, 'zing'):
         	#print word
 
-        #if uses_all(word, 'aeiouy'):
-        	#print word
-
-        if is_abecedarian(word):
+        if uses_all(word, 'aeiouy'):
         	print word
+
+        #if is_abecedarian(word):
+        	#print word
 
 
 
