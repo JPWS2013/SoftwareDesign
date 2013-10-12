@@ -24,14 +24,33 @@ def letnum_check(s):
 
 	return False
 
+#####################################################################
+################
+#Allen's Solution
+###############
+
+def letter_number(s):
+	if not len(s)==2:
+		return False
+
+	if not s[0].isalpha():
+		return False
+
+	if not s[1].isdigit():
+		return False
+
+	return True
+
+#####################################################################
+
 # def letters_numbers(s):
 	
 # 	if type(s)!=str:
 # 		print 'You have not provided a string'
 # 		return False
 
-# 	first_char=ord(s[0].lower())
-# 	sec_char=ord(s[1].lower())
+# 	for eachChar in s:
+# 		while eachChar !=
 
 # 	if first_char==sec_char:
 # 		if (first_char>122 and first_char<97):
@@ -51,6 +70,34 @@ def letnum_check(s):
 			
 
 # 	return False
+
+####################################################################
+
+#############
+#Allen's Solution
+#############
+
+def letters_numbers(s):
+	i=0
+
+	while i< len(s):
+		if not s[i].isalpha():
+			if s[i].isdigit():
+				break
+			else:
+				return False
+		else:
+			i+=1
+
+	i+=1
+
+while i<len(s):
+	if not s[i].isdigit():
+		return False
+	else:
+		i+=1
+
+return True
 
 def interleave(s1, s2):
 	newstring=''
