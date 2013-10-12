@@ -46,6 +46,19 @@ def is_abecedarian(s):
 			return False
 	return True
 
+def double_letters(s):
+
+	if len(s)<6:
+		return False
+
+	for i in range(len(s)-5):
+		if s[i].lower()==s[i+1].lower():
+			if s[i+2].lower()==s[i+3].lower():
+				if s[i+4].lower()==s[i+5].lower():
+					return True
+
+	return False
+
 def main():
     for line in open('words.txt'):
 
@@ -65,13 +78,14 @@ def main():
         #if use_only(word, 'zing'):
         	#print word
 
-        if uses_all(word, 'aeiouy'):
-        	print word
+        #if uses_all(word, 'aeiouy'):
+        	#print word
 
         #if is_abecedarian(word):
         	#print word
 
-
+        if double_letters(word):
+        	print word
 
 if __name__ == '__main__':
     main()
