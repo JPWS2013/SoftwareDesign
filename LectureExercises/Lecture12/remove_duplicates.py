@@ -2,7 +2,9 @@ def remove_duplicates(origList):
 	newlist=[]
 
 	for eachElement in origList:
-		if eachElement not in newlist:
+		anElement=eachElement
+		
+		if anElement not in newlist:
 			newlist.append(eachElement)
 
 	return newlist
