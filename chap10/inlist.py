@@ -1,44 +1,31 @@
-"""This module contains code from
-Think Python by Allen B. Downey
-http://thinkpython.com
+import bisect
 
-Copyright 2012 Allen B. Downey
-License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
+def make_word_list1():
+    """Reads lines from a file and builds a list using append.
 
-"""
-
-from bisect import bisect_left
-
-
-def make_word_list():
-    """Reads lines from a file and builds a list using append."""
-    word_list = []
-    fin = open('words.txt')
-    for line in fin:
-        word = line.strip()
-        word_list.append(word)
-    return word_list
-
-
-def in_bisect(word_list, word):
-    """Checks whether a word is in a list using bisection search.
-
-    Precondition: the words in the list are sorted
-
-    word_list: list of strings
-    word: string
+    returns: list of strings
     """
-    i = bisect_left(word_list, word)
-    if i != len(word_list) and word_list[i] == word:
-        return True
-    else:
-        return False
-
-
-if __name__ == '__main__':
-    word_list = make_word_list()
+    t = []
     
-    for word in ['alien', 'allen']:
-        print word, 'in list', in_bisect(word_list, word)
+    for line in open('words.txt'):
+        word=line.strip()
 
+        t.append(word)
 
+    return t
+
+def is_in_list(wordlist, word):
+	i=bisect.bisect_left(wordlist, word)
+
+	if i != len(wordlist) and wordlist[i]==word:
+		return True
+	else:
+		return False
+
+wordlist=make_word_list1()
+
+# wordlist=['children', 'cow', 'tongue', 'kid', 'hopper']
+
+# wordlist.sort()
+
+print is_in_list(wordlist, 'zzzzzzzzzzzzzzzzz')
