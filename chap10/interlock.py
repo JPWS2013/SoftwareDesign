@@ -58,15 +58,14 @@ def interlock_general(wordlist, word, n=3):
 wordlist=make_word_list()
 testlist=[]
 
-# for eachWord in wordlist:
-# 	if interlock(wordlist, eachWord):
-# 		testlist.append(eachWord)
-# 		print eachWord, ' ', eachWord[::2], ' ', eachWord[1::2]
-
-
 for eachWord in wordlist:
-	if interlock_general(wordlist, eachWord):
+	if interlock(wordlist, eachWord):
 		testlist.append(eachWord)
-		#print eachWord, ' ', eachWord[::3], ' ', eachWord[1::3], eachWord[2::3]
+		print eachWord, ' ', eachWord[::2], ' ', eachWord[1::2]
 
-print len(testlist)
+
+# for eachWord in wordlist:
+# 	if interlock_general(wordlist, eachWord):
+# 		testlist.append(eachWord)
+# 		print eachWord, ' ', eachWord[::3], ' ', eachWord[1::3], eachWord[2::3]
+

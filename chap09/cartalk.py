@@ -20,41 +20,64 @@ def double_letters(s):
 
     return False
 
+def palindrome_test(reading, start, end):
+    """
+    Tests if a given odometer reading is a palindrome when sliced between the start and end points given
+
+    reading: Must be an integer or string
+    start: must be an integer
+    end: must be an integer
+
+    Returns boolean True or False Values
+
+
+    """
+    cleanReading='0'*(6-len(str(reading)))+str(reading) #Assumes any number with a zero in front is also a valid number and adds zeros to the front of the number to make it 6 digits 
+    testString=cleanReading[start:end]
+
+    return testString==testString[::-1]
+
+
 def odo_palindrome(raw_reading):
     
-    cleanReading=str(raw_reading)
-    cleanReading='0'*(6-len(cleanReading))+cleanReading
-    lastFour=cleanReading[-4:]
+    """
+    Tests for the conditions given in the cartalk puzzle
 
-    if lastFour==lastFour[::-1]:
+    raw_reading: Must be an integer or string
 
-        raw_reading+=1
-        cleanReading2=str(raw_reading)
-        cleanReading2='0'*(6-len(cleanReading2))+cleanReading2
+    Returns boolean True or False Values
 
-        lastFive=cleanReading2[-5:]
+    """
 
-        if lastFive==lastFive[::-1]:
-
-            raw_reading+=1
-
-            cleanReading3=str(raw_reading)
-            cleanReading3='0'*(6-len(cleanReading2))+cleanReading3
-
-            if cleanReading3==cleanReading3[::-1]:
-                return True
-
-    return False
+    return palindrome_test(raw_reading, 2, 6) and palindrome_test(raw_reading+1, 1, 6) and palindrome_test(raw_reading+2, 1, 5) and palindrome_test(raw_reading+3, 0, 6)
     
+def make_word_list():
+    """Reads lines from a file and builds a list using append.
 
-#print double_letters('brrtt')
+    returns: list of strings
+    """
+    t = []
+    
+    for line in open('words.txt'):
+        word=line.strip()
 
-test_odo_data=range(999999)
+        t.append(word)
 
-for eachData in test_odo_data:
-    if odo_palindrome(eachData)==True:
-        clean=str(eachData)
-        clean='0'*(6-len(clean))+clean
-        print clean
+    return t
 
-#print odo_palindrome(99)
+# words=make_word_list()
+
+# for eachWord in words:
+#     if double_letters(eachWord):
+#         print eachWord
+
+
+# test_odo_data=range(999999)
+
+# for eachData in test_odo_data:
+#     if odo_palindrome(eachData)==True:
+#         clean=str(eachData)
+#         clean='0'*(6-len(clean))+clean
+#         print clean
+
+#print odo_palindrome(199999)
