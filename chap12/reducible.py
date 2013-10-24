@@ -92,5 +92,5 @@ wordlist=make_word_list()
 
 #print generate_children(wordlist, 'it')
 
-print is_reducible(wordlist, ['tree'])
+print is_reducible(wordlist, ['sprite'])
 #print memo
