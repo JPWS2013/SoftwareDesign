@@ -7,6 +7,8 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 
 """
 
+from structshape import structshape
+
 def make_word_dict():
     """Reads the words in words.txt and returns a dictionary
     that contains the words as keys."""
@@ -118,7 +120,10 @@ def print_longest_words(word_dict):
 
 
 if __name__ == '__main__':
+
     word_dict = make_word_dict()
     #print_longest_words(word_dict)
-    print_trail('superintendences')
+    #print_trail('superintendences')
     #print is_reducible('it', word_dict)
+
+    print structshape(all_reducible(word_dict))
