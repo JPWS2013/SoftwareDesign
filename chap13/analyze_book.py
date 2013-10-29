@@ -69,8 +69,16 @@ def most_common(hist):
     returns: list of (word, frequency) pairs, sorted by frequency
     """
     t = []
-    # TODO: fix this
-    return t
+    res=[]
+
+    for word, frequency in hist.items():
+        t.append((frequency, word))
+
+    t.sort(reverse=True)
+
+    for frequency, word in t:
+        res.append((word, frequency))
+    return res
 
 
 def print_most_common(hist, num=10):
@@ -93,7 +101,11 @@ def subtract(d1, d2):
     returns: new dictionary
     """
     res = {}
-    # TODO: fill this is
+    
+    for key in d1:
+        if key not in d2:
+            res[key]=None
+
     return res
 
 
@@ -105,15 +117,20 @@ def total_words(hist):
 def different_words(hist):
     """Returns the number of different words in a histogram."""
     return len(hist)
-
+  
 
 def random_word(hist):
     """Chooses a random word from a histogram.
 
     The probability of each word is proportional to its frequency.
     """
-    # TODO: fix this
-    return 'random word'
+    
+    t=[]
+
+    for word, freq in hist.items():
+        t.extend([word]*freq)
+
+    return random.choice(t)
 
 
 if __name__ == '__main__':
