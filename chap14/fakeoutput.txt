@@ -1,0 +1,104 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Needham, MA zip code</title>
+<meta name="description" content="What is the ZIP code for Needham, MA? 02492: Zip Code Lookup Service Including Geographic and Demographic Statistics and Maps, Public School Records, Universities, Medical Institutes, Crime Rates and Weather Information.">
+<meta name="keywords" content="Needham MA zip code, Needham zip code, MA zip codes, Needham us zip, Needham postal codes, Needham postal code, Needham maps, Needham census data, Needham census, Needham weather, Needham housing, Needham schools, Needham public libraries, Needham hospitals, Needham crime rates">
+<meta name="google-site-verification" content="07Yy49_ok2XAx7NZbBiWqMi8-6I24MSfUfGaEKxyyz4" />
+<base href="http://www.uszip.com/">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster+Two:400,700,400italic,700italic">
+<link rel="stylesheet" href="root/app_common/css/normalize.css">
+<link rel="stylesheet" href="root/app_common/css/smoothness/jquery-ui-1.10.3.custom.min.css">
+<link rel="stylesheet" href="root/app_common/css/uzip.css">
+<!--[if lt IE 9]> <link rel="stylesheet" href="root/app_common/css/uzip-ie8.css"> <![endif]-->
+<!--[if lt IE 8]> <link rel="stylesheet" href="root/app_common/css/uzip-ie7.css"> <![endif]-->
+<link rel="stylesheet" href="root/app_common/css/helpers.css">
+<link rel="stylesheet" href="root/app_common/css/media.css">
+<link rel="shortcut icon" type="image/x-icon" href="root/app_common/img/favicon_uzip.ico">
+<link rel="search" type="application/opensearchdescription+xml" title="USZip.com" href="http://www.uszip.com/open-search.xml">
+<script src="root/app_common/js/libs/modernizr-2.6.2.custom.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnwrsw6r1n8CqPRhP9AK8la5o6DMLMDl0&sensor=false"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-172613-7']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script></head>
+<body id="s4-page-homepage" data-fb="415599681828434" data-atp="ra-4f75bf3d5305fac2">
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=415599681828434";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="page-container">
+<header id="header">
+	<div id="header-int" class="clearfix">
+		<div id="network-header"><span id="network-header-trigger">The STANDS4 Network<span class="arw">&#x25BC;</span></span>
+	<ul id="network-header-links" style="display:none;">
+		<li class="nw-abbreviations"><b><a href="http://www.abbreviations.com/">ABBREVIATIONS</b></a></li>
+		<li class="nw-biographies"><a href="http://www.biographies.net/">BIOGRAPHIES</a></li>
+		<li class="nw-convert"><a href="http://www.convert.net/">CONVERSIONS</a></li>
+		<li class="nw-definitions"><a href="http://www.definitions.net/">DEFINITIONS</a></li>
+		<li class="nw-lyrics"><a href="http://www.lyrics.net/">LYRICS</a></li>
+		<li class="nw-phrases"><a href="http://www.phrases.net/">PHRASES</a></li>
+		<li class="nw-quotes"><a href="http://www.quotes.net/">QUOTES</a></li>
+		<li class="nw-references"><a href="http://www.references.net/">REFERENCES</a></li>
+		<li class="nw-rhymes"><a href="http://www.rhymes.net/">RHYMES</a></li>
+		<li class="nw-symbols"><a href="http://www.symbols.net/">SYMBOLS</a></li>
+		<li class="nw-synonyms"><a href="http://www.synonyms.net/">SYNONYMS</a></li>
+		<li class="nw-uszip"><a href="http://www.uszip.com/">USZIP</a></li>
+	</ul>
+</div>	</div>
+</header><div id="main" role="main">
+<div id="content-container" class="clearfix">
+	
+	<div id="content-top">
+	<form id="search-frm" method="get" action="subserp.php">
+<input type="hidden" id="page-word-search-op1" name="qtype" value="1">
+<div id="page-top-search" class="rc5">
+	<div id="page-word-search">
+		<input type="text" id="page-word-search-query" class="rc5" name="st" value="02492" placeholder="Search for zipcode or place name..." autocomplete="off">
+		<div id="page-word-search-icon"></div>
+		<button type="submit" class="btn primary" id="page-word-search-button">Search</button>
+	</div>
+</div>
+<div id="page-letter-search" class="rc5"></div>
+</form>	<div id="page-top-logo" onclick="location.href='http://www.uszip.com/';"><img src="root/app_common/img/top_logo_zip.png" alt="USZip.com" title="USZip.com"></div>
+</div>	
+	<div id="content-main">
+		<div id="content-body">
+			
+						
+				<div class="zip-data clearfix">
+					
+					<!-- place name / title -->
+					
+											<hgroup>
+							<span style="float:right;" class="fb-like" data-href="" data-width="" data-height="" data-colorscheme="light" data-layout="box_count" data-action="like" data-show-faces="true" data-send="false"></span>
+
+							<h3><strong>02492</strong> is the zip code for</h3>
+							<h2><strong>Needham, <a href="state.php?state=MA">MA</a></strong></h2>
+						</hgroup>
+										
+					<!-- geographic data / map -->
+					
+											<dl class="zip-stats zip-stats-left"><dt class="fw">Also in this location:</dt><dt class="l2 fw"><strong>Wellesley, <a href="state.php?state=MA">MA</a></strong></dt><hr><dt>Total population</dt><dd>19,931<span class="trend trend-up" title="+14 (+0.07% since 2000)">&#9650;</span></dd><dt>Housing units</dt><dd>7,382<span class="trend trend-up" title="+89 (+1.21% since 2000)">&#9650;</span></dd><dt>Land area<br><span class="stype">(sq. miles)</span></dt><dd>9.53</dd><dt>Density<br><span class="stype">(people per sq. mile)</span></dt><dd>2,091.40<span class="trend trend-up" title="+1 (+0.07% since 2000)">&#9650;</span></dd><dt>Water area<br><span class="stype">(sq. miles)</span></dt><dd>0.35</dd></dl>
+						<div id="zip-place-map-ext" class="stats-chart-ext stats-chart-right">

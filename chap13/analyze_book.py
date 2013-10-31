@@ -5,6 +5,8 @@ http://thinkpython.com
 Copyright 2012 Allen B. Downey
 License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 
+Code then modified by Justin Poh on 29th October 2013
+
 """
 
 import string

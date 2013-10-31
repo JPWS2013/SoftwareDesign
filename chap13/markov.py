@@ -9,6 +9,9 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 
 import string
 import random
+from swampy.Lumpy import Lumpy
+
+lumpy=Lumpy()
 
 
 def process_file(filename, skip_header=True):
@@ -157,49 +160,35 @@ def markov_assembly(wordlist, n=50):
 
     for i in range(n):
         nextSuffix=random.choice(allSuffix)
-        #print nextSuffix
         res.append(nextSuffix)
-        #print res
         nextPrefix=(res[-2], res[-1])
-        #print nextPrefix
 
         if nextPrefix in mark_dict:
             allSuffix=mark_dict[nextPrefix]
-            #print "allSuffix after check=", allSuffix
         else:
             nextPrefix=random.choice(mark_dict.keys())
-            #print "nextPrefix=", nextPrefix
             res.append(nextPrefix[0])
             res.append(nextPrefix[1])
-            #print res
             allSuffix=mark_dict[nextPrefix]
-            #print "allSuffix after random prefix=", allSuffix
 
+    #lumpy.object_diagram()
+    
     return res
 
-def markov_assembly_complicated(wordlist, n=10):
+def markov_assembly_complicated(wordlist, n=100):
     start_tuple=random.choice(mark_dict.keys())
     res=list(start_tuple)
     allSuffix=mark_dict[start_tuple]
-    print res
-    print allSuffix
 
     for i in range(n):
         ready=False
         nextSuffix=random.choice(allSuffix)
-        #print nextSuffix
         res.append(nextSuffix)
-        #print res
-        nextPrefix=(res[-1], res[-2])
-        #print nextPrefix
+        nextPrefix=(res[-2], res[-1])
 
         if nextPrefix in mark_dict:
             allSuffix=mark_dict[nextPrefix]
-            #print "allSuffix after check=", allSuffix
         else:
-            #print "Not in dict"
-            #print nextPrefix
-            #print nextPrefix[1]
             for eachKey in mark_dict:
                 if nextPrefix[1]==eachKey[1]:
                     print eachKey
@@ -209,12 +198,10 @@ def markov_assembly_complicated(wordlist, n=10):
             if ready==False:
 
                 nextPrefix=random.choice(mark_dict.keys())
-                #print "nextPrefix=", nextPrefix
                 res.append(nextPrefix[0])
                 res.append(nextPrefix[1])
-                #print res
                 allSuffix=mark_dict[nextPrefix]
-                #print "allSuffix after random prefix=", allSuffix
+    #lumpy.object_diagram()
 
     return res
 
@@ -226,32 +213,10 @@ def print_assembly(assemList):
     return res
 
 if __name__ == '__main__':
-    # hist = process_file('emma.txt', skip_header=True)
-    # print 'Total number of words:', total_words(hist)
-    # print 'Number of different words:', different_words(hist)
 
-    # t = most_common(hist)
-    # print 'The most common words are:'
-    # for freq, word in t[0:20]:
-    #     print word, '\t', freq
-
-    words = process_file('bee.txt', skip_header=False)
-
-    #print words
-
-    # for word in words:
-    #     if type(word)==type(None):
-    #         print "Nonetype"
+    words = process_file('muchado.txt', skip_header=False)
     markov_dic(words)
 
-    markList=markov_assembly(words)
+    #markList=markov_assembly(words)
+    markList=markov_assembly_complicated(words)
     print print_assembly(markList)
-    # diff = subtract(hist, words)
-    # print "The words in the book that aren't in the word list are:"
-    # for word in diff.keys():
-    #     print word,
-
-    # print "\n\nHere are some random words from the book"
-    # for i in range(100):
-    #     print random_word(hist),
-
