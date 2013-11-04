@@ -42,31 +42,34 @@ def birthday(birthdate):
 
 def doubleday(bd1, bd2):
 
+	foundIt=False
+
 	t1a=bd1.split('/')
 	t2a=bd2.split('/')
 
-	if t1a>t2a:
-		t1=t1a
-		t2=t2a
-	else:
-		t2=t1a
-		t1=t2a
-
-	print t1, t2
-
-	BDay1=dt.date(int(t1[2]), int(t1[1]), int(t1[0]))
-	BDay2=dt.date(int(t2[2]), int(t2[1]), int(t2[0]))
+	BDay1=dt.date(int(t1a[2]), int(t1a[1]), int(t1a[0]))
+	BDay2=dt.date(int(t2a[2]), int(t2a[1]), int(t2a[0]))
 	dateToday=dt.date.today()
 
-	age1=dateToday-BDay1
-	age2=dateToday-BDay2
+	if BDay1>BDay2:
+		t1=BDay1
+		t2=BDay2
+	else:
+		t2=BDay1
+		t1=BDay2
+
+	#print t1, t2
+
+	age1=dateToday-t1
+	print "age1=", age1
+	age2=dateToday-t2
 
 	age1Days=age1.days
 	age2Days=age2.days
 
 	i=1
 
-	while age2Days!=2*age1Days:
+	while age2Days!=2*age1Days and i<40000:
 		age1Days+=1
 		age2Days+=1
 
@@ -74,11 +77,16 @@ def doubleday(bd1, bd2):
 		print "age2Days=", age2Days
 
 		if age2Days==2*age1Days:
+			foundIt=True
 			break
 		i+=1
-		print i
+		#print i
 
-	return i
+	if foundIt==False:
+		return 'bad'
+
+	else: 
+		return i
 
 
 if __name__ == '__main__':
@@ -90,4 +98,16 @@ if __name__ == '__main__':
 	# timeleft=birthday(bday)
 	# print "Your age is ", timeleft[0][0], "years, ", timeleft[0][1], "months and ", timeleft[0][2], "days. There are ", timeleft[1], "until your next birthday"
 
-	print doubleday('06/09/1974', '26/02/1994')
+	res=doubleday('04/11/1964', '04/11/1994')
+
+	if res=='bad':
+		print "No doubleday found"
+
+	else:
+		year_rest=divmod(res, 365)
+		years=year_rest[0]
+		months_rest=divmod(year_rest[1], 30)
+		months=months_rest[0]
+		days=months_rest[1]
+
+		print "Your DoubleDay will occur ", years, "years, ", months, "months and ", days, "days in the future."
