@@ -3,17 +3,16 @@ def make_word_list():
 
     returns: list of strings
     """
-    t = []
+    t = {}
     
     for line in open('words.txt'):
         word=line.strip()
 
-        t.append(word)
+        t[word]=word
 
-    t.append('a')
-    t.append('i')
-    t.append('')
-
+    t['a']='a'
+    t['i']='i'
+    t['']=''
     return t
 
 memo={'':['']}
@@ -70,8 +69,13 @@ def find_longest(t1):
 
     return t2[-1][1]
 
-wordlist=make_word_list()
+if __name__ == '__main__':
+    wordlist=make_word_list()
 
-output=find_reducible(wordlist)
+    #print is_reducible('sprite', wordlist)
+    #print memo
 
-#print find_longest(output)
+    output=find_reducible(wordlist)
+    #print output
+    
+    print "The Longest Reducible Word is: ", find_longest(output)

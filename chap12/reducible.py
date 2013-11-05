@@ -3,94 +3,79 @@ def make_word_list():
 
     returns: list of strings
     """
-    t = []
+    t = {}
     
     for line in open('words.txt'):
         word=line.strip()
 
-        t.append(word)
+        t[word]=word
 
+    t['a']='a'
+    t['i']='i'
+    t['']=''
     return t
 
-memo={}
+memo={'':['']}
 
-def generate_children(wordlist, word):
-	children=[]
+def generate_children(word, wordlist):
+    children=[]
 
-	if word in memo:
-		return memo[word]
+    for i in range (len(word)):
+        newWord=word[:i]+word[i+1:]
 
-	for i in range(len(word)):
-		newWord=word[:i] + word[i+1:]
+        if newWord in wordlist:
+            children.append(newWord)
 
-		if newWord in wordlist:
-			children.append(newWord)
+    return children
 
-		elif newWord.lower()=='i' or newWord.lower()=='a':
-			children.append(newWord)
+def is_reducible(word, wordlist):
 
-	memo[word]=children
+    if word in memo:
+        return memo[word]
 
-	return children
+    res=[]
 
-def sub_child_gen(wordlist, children):
+    child_list=generate_children(word, wordlist)
 
-	if len(children) != 0:
-		subchildren=[]
-		for eachChild in children:
-			subchildren=subchildren + generate_children(wordlist, eachChild)
-		uniqueSubChildren=[]
+    for eachWord in child_list:
+        sub_child_list= is_reducible(eachWord, wordlist)
+        memo[eachWord]=sub_child_list
 
-		for eachSubChild in subchildren:
-			if eachSubChild not in uniqueSubChildren:
-				uniqueSubChildren.append(eachSubChild)
+        if sub_child_list:
+            res.append(eachWord)
+    
+    memo[word]=res
+    return res
 
-		return uniqueSubChildren
+def find_reducible(wordlist):
+    
+    res=[]
 
-	else:
-		return []
+    for word in wordlist:
+        output=is_reducible(word, wordlist)
 
-def is_reducible(wordlist, childList):
-	
-	child_list=sub_child_gen(wordlist, childList)
+        if output!=[]:
+            res.append(word)
 
-	if len(child_list)==1:
-		return child_list[0].lower()=='a' or child_list[0].lower()=='i'
+    return res
 
-	elif len(child_list) != 0:
-		return is_reducible(wordlist, child_list)
+def find_longest(t1):
+    t2=[]
 
-	else:
-		return False
+    for word in t1:
+        t2.append((len(word), word))
 
-def longest_anagram(wordlist):
-	anagram_list=[]
-	for eachWord in wordlist:
+    t2.sort()
 
-		print eachWord
+    return t2[-1][1]
 
-		#print is_reducible(wordlist, [eachWord])
+if __name__ == '__main__':
+    wordlist=make_word_list()
 
-		if is_reducible(wordlist, [eachWord]):
-			anagram_list.append(eachWord)
+    #print is_reducible('sprite', wordlist)
+    #print memo
 
-	# sortedAnagrams=[]
-
-	# for eachAnagram in anagram_list:
-	# 	sortedAnagrams.append((len(eachAnagram), eachAnagram))
-
-	# sortedAnagrams.sort()
-
-	return anagram_list#sortedAnagrams[-1]
-
-wordlist=make_word_list()
-
-#print generate_children(wordlist, 'it')
-
-#print longest_anagram(wordlist)
-#wordlist=make_word_list()
-
-#print generate_children(wordlist, 'it')
-
-print is_reducible(wordlist, ['sprite'])
-#print memo
+    output=find_reducible(wordlist)
+    #print output
+    
+    print "The Longest Reducible Word is: ", find_longest(output)
