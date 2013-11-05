@@ -122,8 +122,8 @@ def print_longest_words(word_dict):
 if __name__ == '__main__':
 
     word_dict = make_word_dict()
-    #print_longest_words(word_dict)
+    print_longest_words(word_dict)
     #print_trail('superintendences')
-    #print is_reducible('it', word_dict)
+    #print is_reducible('sprite', word_dict)
 
-    print structshape(all_reducible(word_dict))
+    #print structshape(all_reducible(word_dict))
